@@ -23,7 +23,7 @@ import br.senai.maria.entity.login.UserResponse;
 @Stateless
 public class LoginService {
 
-	@PersistenceContext(unitName = "TwitterLikePU")
+	@PersistenceContext(unitName = "MariaPU")
 	private EntityManager em;
 	
 	private LoginAccessData accessData = new LoginAccessData();
