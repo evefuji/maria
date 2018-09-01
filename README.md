@@ -2,13 +2,13 @@
 # Pré-Requisitos
 
 * Maven (Testado na versão 3.5.2)
-* Wildfly 11.0.0 Final: Utilizado o Wildfly com Teiid (não obrigatório) [http://teiid.jboss.org/downloads/](http://teiid.jboss.org/downloads/) 
-* SGBD Relacional com datasource instalado. Testado em PostgreSQL 10.1.3 rodando sobre Windows: [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
+* Wildfly 11.0.0 Final: Utilizado o Wildfly 
+* SGBD Relacional com datasource instalado. 
 * Eclipse Oxygen 
 * DataSource JDBC configurado no Wildfly conectando com o SGBD Relacional. 
 
 
-*- Ex no PostgreSQL:
+*- Ex no MySQL:
 
 -- Baixar driver JDBC mais recente e copiá-lo para a pasta deployments do Wildfly. [https://jdbc.postgresql.org/download.html](https://jdbc.postgresql.org/download.html) 
 
@@ -56,10 +56,10 @@ Criar um arquivo ~/.m2/settings.xml com o seguinte conteúdo (substituindo os da
         <properties>
             
           <!-- Base de dados de exemplo -->
-          <maria.jdbc.driver>org.postgresql.Driver</maria.jdbc.driver>
-          <maria.jdbc.url>jdbc:postgresql://localhost:5432/twitter_like</maria.jdbc.url>
-          <maria.jdbc.username>twitter_like</maria.jdbc.username>
-          <maria.jdbc.password>123456</maria.jdbc.password>
+        <maria.jdbc.driver>com.mysql.jdbc.Driver</maria.jdbc.driver>
+        <maria.jdbc.url>jdbc:mysql://localhost:3306/maria?useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</maria.jdbc.url>
+        <maria.jdbc.username>root</maria.jdbc.username>
+        <maria.jdbc.password></maria.jdbc.password>
           
         </properties>
       </profile>
